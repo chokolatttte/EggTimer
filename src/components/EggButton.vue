@@ -1,9 +1,12 @@
 <script setup>
-defineProps(['name'])
+defineProps(['name','link'])
+
 </script>
 
 <template>
   
-<button>{{ name }}</button>
+<button>
+    <RouterLink :to="link"> {{ name }} </RouterLink>
+</button>
 
 </template>
