@@ -1,21 +1,13 @@
 <script setup>
-import { ref } from 'vue';
+import { computed, ref } from 'vue';
+import Timer from '@/components/Timer.vue';
 
-const message = ref("Start");
-
-function ToggleView(){
-    if (!message.value.localeCompare("Start")) {
-        message.value = "Stop";
-    }
-    else{
-        message.value = "Start";
-    }
-}
+const title = ref('Oeufs à la coque')
+const timeNeeded = ref(180) //secondes
 
 </script>
 
 <template>
-    <div>
-        <button @click="ToggleView"> {{ message }} </button>
-    </div>
+    <h1> {{ title }} </h1>
+    <Timer :timeNeeded="timeNeeded"/>
 </template>
