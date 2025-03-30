@@ -11,24 +11,35 @@ const buttons = ref([
   {id: 4, name: 'Oeuf au plat', link: '/oeuf/plat', src: '/images/OeufAuPlatButton.png'}
 ])
 
-function getImageSize(index) {
-  const img = this.buttons[index];
-  this.imageWidth = img.naturalWidth;
-  this.imageHeight = img.naturalHeight;
-}
-
-
 </script>
         
 <template>
     <div class="background">
-      <h1 style="color: black; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">{{ title }}</h1>
-      <p></p>
-      <EggButton v-for="(btn,index) in buttons" :src="btn.src" :link="btn.link"/>
+      <div class="header">
+        <h1 class="title ">{{ title }}</h1>
+      </div>
+      
+      <div class="body">
+        <div class="card" v-for="(btn,index) in buttons">
+          <EggButton  :src="btn.src" :link="btn.link"/>
+        </div>
+      </div>
+      
     </div>
 </template>
 
 <style>
+
+.title {
+  text-align: center; 
+  color: plum; 
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-shadow: 
+      1px 1px 0px rgba(0, 0, 0, 1),
+      -1px -1px 0px rgba(0, 0, 0, 1),
+      -1px 1px 0px rgba(0, 0, 0, 1),
+      1px -1px 0px rgba(0, 0, 0, 1);
+}
 
 .background {
   background-image: url(/images/background.jpg);
@@ -36,6 +47,23 @@ function getImageSize(index) {
   background-repeat: no-repeat;
   height: 420px;
   width: 280px;
+}
+
+.header {
+  padding-top: 7%;
+}
+
+.body {
+  padding-top: 7%;
+  padding-left: 7%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  padding-left: 5%;
+  padding-bottom: 5%;
+
 }
 
 </style>

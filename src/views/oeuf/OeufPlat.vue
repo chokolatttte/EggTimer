@@ -10,19 +10,17 @@ const timeNeeded = ref(180) //secondes
 
 <template>
     <div class="background">
-        <div class="header">
+        <div class="timer-header">
             <HomeButton></HomeButton>
         </div>
 
-        <div class="sub-header">
+        <div class="timer-sub-header">
             <h1 class="title"> {{ title }} </h1>
         </div>
         
-        <div class="body">
+        <div class="timer-body">
             <Timer :timeNeeded="timeNeeded"/>
         </div>
-        
-        
     </div>
 </template>
 
@@ -39,17 +37,17 @@ const timeNeeded = ref(180) //secondes
         1px -1px 0px rgba(0, 0, 0, 1);
 }
 
-.header {
+.timer-header {
     padding-top: 2%;
     padding-left: 1%;
 }
 
-.sub-header {
-    padding-top: 5%;
+.timer-sub-header {
+    padding-top: 3%;
 }
 
-.body {
-    padding-top: 8%;
+.timer-body {
+    padding-top: 5%;
 }
 
 </style>
