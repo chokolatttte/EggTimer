@@ -27,6 +27,7 @@ const timeNeeded = ref(360) //secondes
 <style>
 
 .title {
+    font-size: 15vmin;
     text-align: center; 
     color: plum; 
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -38,16 +39,14 @@ const timeNeeded = ref(360) //secondes
 }
 
 .timer-header {
-    padding-top: 2%;
-    padding-left: 1%;
+    padding-top: 1vh;
+    padding-left: 1vh;
+    height: 10vh;
 }
 
 .timer-sub-header {
-    padding-top: 3%;
-}
-
-.timer-body {
-    padding-top: 5%;
+    height: 20vh;
+    align-content: center;
 }
 
 </style>

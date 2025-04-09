@@ -22,8 +22,16 @@ export default {
 
 <template>
     <RouterLink width="imageWidth" height="imageHeight" :to="'/'">
-            <img ref="myImage" src="/images/HomeButton.png" @load="getImageSize">
+            <img class="homeButton" ref="myImage" src="/images/HomeButton.png" @load="getImageSize">
     </RouterLink>
 
 </template>
+
+<style>
+
+.homeButton {
+    height: 7vh;
+}
+
+</style>
 

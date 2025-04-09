@@ -68,31 +68,28 @@ function getImageSize(ref) {
 <style scoped>
 
 .circle {
-    width: 200px;
-    height: 200px;
+    width: 80vmin;
+    height: 80vmin;
     background: plum;
-    -moz-border-radius: 100px;
-    -webkit-border-radius: 100px;
-    border-radius: 100px;
+    border-radius: 50%;
 }
 
 .time-container {
-    margin: auto;
+    padding: 4vh;
     display: flex;
     flex-direction: line;
     align-items: center;
     justify-content: center;
-    min-width: 200;
+    height: 50vh;
 }
 
 .container {
-    padding-top: 5%;
-    margin: auto;
+    padding: 4vh;
     display: flex;
     flex-direction: line;
     align-items: center;
     justify-content: center;
-    min-width: 200;
+    height: 20vh;
 }
 
 .time-button {
@@ -102,10 +99,14 @@ function getImageSize(ref) {
     cursor: pointer;
 }
 
+.time-button img {
+    height: 10vh;
+}
+
 .time {
     text-align: center;
-    padding-top: 35%;
-    font-size: xx-large;
+    padding-top: calc(80vmin/2 - 9vmin);
+    font-size: 10vmin;
     color: purple;
 }
 

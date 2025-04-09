@@ -20,8 +20,8 @@ const buttons = ref([
       </div>
       
       <div class="body">
-        <div class="card" v-for="(btn,index) in buttons">
-          <EggButton  :src="btn.src" :link="btn.link"/>
+        <div class="card" v-for="(btn,index) in buttons" >
+          <EggButton :src="btn.src" :link="btn.link"/>
         </div>
       </div>
       
@@ -30,40 +30,38 @@ const buttons = ref([
 
 <style>
 
+.background {
+  background-color: cadetblue;
+}
+
+.header {
+  margin-top: 13vw;
+  margin-left: 3vw;
+  margin-right: 3vw;
+}
+
 .title {
+  font-size: 11vmin;
   text-align: center; 
   color: plum; 
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   text-shadow: 
-      1px 1px 0px rgba(0, 0, 0, 1),
-      -1px -1px 0px rgba(0, 0, 0, 1),
-      -1px 1px 0px rgba(0, 0, 0, 1),
-      1px -1px 0px rgba(0, 0, 0, 1);
-}
-
-.background {
-  background-image: url(/images/background.jpg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 420px;
-  width: 280px;
-}
-
-.header {
-  padding-top: 7%;
+      1vmin 1vmin 0px rgba(0, 0, 0, 1),
+      -1vmin -1vmin 0px rgba(0, 0, 0, 1),
+      -1vmin 1vmin 0px rgba(0, 0, 0, 1),
+      1vmin -1vmin 0px rgba(0, 0, 0, 1);
 }
 
 .body {
-  padding-top: 7%;
-  padding-left: 7%;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  padding: 3vw;
 }
 
 .card {
-  padding-left: 5%;
-  padding-bottom: 5%;
-
+  width: 41vw;
+  margin: 3vw;
 }
+
 
 </style>

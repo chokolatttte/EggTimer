@@ -31,20 +31,5 @@ export default {
 
 <style>
 
-.imageButton {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 3px;
-  overflow: hidden;
-  text-decoration: none;
-  border: none;
-  background: none;
-  cursor: pointer;
-}
-
-.image-button:focus {
-  outline: none;
-}
 
 </style>

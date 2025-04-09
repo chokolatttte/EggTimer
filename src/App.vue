@@ -4,7 +4,7 @@
 
 <template>
 
-  <div id="app">
+  <div>
     <RouterView/>
   </div>
   
