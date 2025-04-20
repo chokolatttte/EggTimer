@@ -5,10 +5,10 @@ import { ref } from 'vue';
 const title = "Le paradis des oeufs"
 
 const buttons = ref([
-  {id: 1, name: 'Oeuf dur', link: '/oeuf/dur', src: '/images/OeufDurButton.png'},
-  {id: 2, name: 'Oeuf mollet', link: '/oeuf/mollet', src: '/images/OeufMolletButton.png'},
-  {id: 3, name: 'Ouef à la coque', link: '/oeuf/coque', src: '/images/OeufALaCoqueButton.png'},
-  {id: 4, name: 'Oeuf au plat', link: '/oeuf/plat', src: '/images/OeufAuPlatButton.png'}
+  {id: 1, name: 'Oeuf dur', link: '/oeuf/dur', src: '/images/OeufDurButton.png', time: '600'},
+  {id: 2, name: 'Oeuf mollet', link: '/oeuf/mollet', src: '/images/OeufMolletButton.png', time: '360'},
+  {id: 3, name: 'Ouef à la coque', link: '/oeuf/coque', src: '/images/OeufALaCoqueButton.png', time: '180'},
+  {id: 4, name: 'Oeuf au plat', link: '/oeuf/plat', src: '/images/OeufAuPlatButton.png', time: '180'}
 ])
 
 </script>
@@ -21,7 +21,7 @@ const buttons = ref([
       
       <div class="body">
         <div class="card" v-for="(btn,index) in buttons" >
-          <EggButton :src="btn.src" :link="btn.link"/>
+          <EggButton :src="btn.src" :link="btn.link" :time="btn.time"/>
         </div>
       </div>
       
@@ -31,25 +31,27 @@ const buttons = ref([
 <style>
 
 .background {
-  background-color: cadetblue;
+  background-image: url(/images/background.jpg);
+  height: 100vh;
+  width: 100vw;
 }
 
 .header {
-  margin-top: 13vw;
   margin-left: 3vw;
   margin-right: 3vw;
 }
 
 .title {
-  font-size: 11vmin;
+  padding-top: 10vmin;
+  font-size: 14vmin;
   text-align: center; 
   color: plum; 
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   text-shadow: 
-      1vmin 1vmin 0px rgba(0, 0, 0, 1),
-      -1vmin -1vmin 0px rgba(0, 0, 0, 1),
-      -1vmin 1vmin 0px rgba(0, 0, 0, 1),
-      1vmin -1vmin 0px rgba(0, 0, 0, 1);
+      0.3vmin 0.3vmin 0px rgba(0, 0, 0, 1),
+      -0.3vmin -0.3vmin 0px rgba(0, 0, 0, 1),
+      -0.3vmin 0.03vmin 0px rgba(0, 0, 0, 1),
+      0.3vmin -0.3vmin 0px rgba(0, 0, 0, 1);
 }
 
 .body {

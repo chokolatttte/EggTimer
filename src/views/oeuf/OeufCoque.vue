@@ -15,7 +15,7 @@ const timeNeeded = ref(180) //secondes
         </div>
 
         <div class="timer-sub-header">
-            <h1 class="title"> {{ title }} </h1>
+            <h1 class="timer-title"> {{ title }} </h1>
         </div>
         
         <div class="timer-body">
@@ -26,7 +26,7 @@ const timeNeeded = ref(180) //secondes
 
 <style>
 
-.title {
+.timer-title {
     font-size: 15vmin;
     text-align: center; 
     color: plum; 

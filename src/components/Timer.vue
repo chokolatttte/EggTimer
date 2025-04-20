@@ -80,7 +80,7 @@ function getImageSize(ref) {
     flex-direction: line;
     align-items: center;
     justify-content: center;
-    height: 50vh;
+    height: 48vh;
 }
 
 .container {
@@ -89,7 +89,7 @@ function getImageSize(ref) {
     flex-direction: line;
     align-items: center;
     justify-content: center;
-    height: 20vh;
+    height: 19.2vh;
 }
 
 .time-button {
