@@ -5,10 +5,10 @@ import { ref } from 'vue';
 const title = "Le paradis des oeufs"
 
 const buttons = ref([
-  {id: 1, name: 'Oeuf dur', link: '/oeuf/dur', src: '/images/OeufDurButton.png', time: '600'},
-  {id: 2, name: 'Oeuf mollet', link: '/oeuf/mollet', src: '/images/OeufMolletButton.png', time: '360'},
-  {id: 3, name: 'Ouef à la coque', link: '/oeuf/coque', src: '/images/OeufALaCoqueButton.png', time: '180'},
-  {id: 4, name: 'Oeuf au plat', link: '/oeuf/plat', src: '/images/OeufAuPlatButton.png', time: '180'}
+  {id: 0, src: '/images/OeufDurButton.png'},
+  {id: 1, src: '/images/OeufMolletButton.png'},
+  {id: 2, src: '/images/OeufALaCoqueButton.png'},
+  {id: 3, src: '/images/OeufAuPlatButton.png'}
 ])
 
 </script>
@@ -21,7 +21,7 @@ const buttons = ref([
       
       <div class="body">
         <div class="card" v-for="(btn,index) in buttons" >
-          <EggButton :src="btn.src" :link="btn.link" :time="btn.time"/>
+          <EggButton :src="btn.src" :link="'/timer/' + btn.id"/>
         </div>
       </div>
       
